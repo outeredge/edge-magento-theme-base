@@ -3,7 +3,7 @@
 <h1><?php echo $this->__('My Orders') ?></h1>
 <?php echo $this->getPagerHtml(); ?>
 <?php if($_orders->getSize()): ?>
-<div class="row">
+<div class="row table-head">
     <div class="large-2 medium-12"><?php echo $this->__('Order #') ?></div>
     <div class="large-2 medium-hide"><?php echo $this->__('Date') ?></div>
     <div class="large-2 medium-hide"><?php echo $this->__('Ship To') ?></div>
@@ -12,7 +12,7 @@
     <div class="large-2 medium-hide">&nbsp;</div>
 </div>
 <?php foreach ($_orders as $_order): ?>
-<div class="row">
+<div class="row table-body">
     <div class="large-2 medium-12"><?php echo $_order->getRealOrderId() ?></div>
     <div class="large-2 medium-12"><?php echo $this->formatDate($_order->getCreatedAtStoreDate()) ?></div>
     <div class="large-2 medium-12"><?php echo $_order->getShippingAddress() ? $this->escapeHtml($_order->getShippingAddress()->getName()) : '&nbsp;' ?></div>
