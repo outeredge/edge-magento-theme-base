@@ -1,0 +1,27 @@
+<?php if ($this->displayBoth()):?>
+<div class="row">
+    <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->helper('tax')->__('Subtotal (Excl. Tax)') ?>
+    </div>
+    <div class="large-3 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValueExclTax()) ?>
+    </div>
+</div>
+<div class="row">
+    <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->helper('tax')->__('Subtotal (Incl. Tax)') ?>
+    </div>
+    <div class="large-3 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValueInclTax()) ?>
+    </div>
+</div>
+<?php else: ?>
+<div class="row">
+    <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->getTotal()->getTitle() ?>
+    </div>
+    <div class="large-3 text-right" style="<?php echo $this->getStyle() ?>">
+        <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValue()) ?>
+    </div>
+</div>
+<?php endif; ?>

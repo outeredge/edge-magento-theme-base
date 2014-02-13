@@ -1,0 +1,45 @@
+<h1><?php echo $this->__('Shopping Cart') ?></h1>
+<?php echo $this->getMessagesBlock()->getGroupedHtml() ?>
+<?php echo $this->getChildHtml('form_before') ?>
+<form action="<?php echo $this->getUrl('checkout/cart/updatePost') ?>" method="post">
+    <?php echo $this->getBlockHtml('formkey'); ?>
+    <fieldset>
+        <div class="row">
+            <div class="large-4"><?php echo $this->__('Product') ?></div>
+            <div class="large-2"><?php echo $this->__('Unit Price') ?></div>
+            <div class="large-2"><?php echo $this->__('Qty') ?></div>
+            <div class="large-2"><?php echo $this->__('Subtotal') ?></div>
+            <div class="large-2">&nbsp;</div>
+        </div>
+        <?php foreach($this->getItems() as $_item): ?>
+            <?php echo $this->getItemHtml($_item) ?>
+        <?php endforeach ?>
+        <div class="row">
+            <?php if($this->getContinueShoppingUrl()): ?>
+                <button type="button" title="<?php echo $this->__('Continue Shopping') ?>" class="button btn-continue" onclick="setLocation('<?php echo $this->getContinueShoppingUrl() ?>')"><?php echo $this->__('Continue Shopping') ?></button>
+            <?php endif; ?>
+            <button type="submit" name="update_cart_action" value="update_qty" title="<?php echo $this->__('Update Shopping Cart'); ?>" class="button btn-update"><?php echo $this->__('Update Shopping Cart'); ?></button>
+            <button type="submit" name="update_cart_action" value="empty_cart" title="<?php echo $this->__('Clear Shopping Cart'); ?>" class="button btn-empty" id="empty_cart_button"><?php echo $this->__('Clear Shopping Cart'); ?></button>
+        </div>
+    </fieldset>
+</form>
+<div class="row">
+    <div class="large-6">
+        <?php echo $this->getChildHtml('crosssell') ?>
+        <?php echo $this->getChildHtml('checkout.cart.extra') ?>
+        <?php echo $this->getChildHtml('coupon') ?>
+        <?php if (!$this->getIsVirtual()): echo $this->getChildHtml('shipping'); endif; ?>
+    </div>
+    <div class="large-6">
+        <?php echo $this->getChildHtml('totals'); ?>
+        <?php if(!$this->hasError()): ?>
+        <ul class="checkout-types">
+        <?php foreach ($this->getMethods('methods') as $method): ?>
+            <?php if ($methodHtml = $this->getMethodHtml($method)): ?>
+            <li><?php echo $methodHtml; ?></li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+        </ul>
+        <?php endif; ?>
+    </div>
+</div>

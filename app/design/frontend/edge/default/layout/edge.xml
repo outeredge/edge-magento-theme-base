@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layout>
+    
+    <default>
+        <remove name="right.poll"/>
+        <remove name="left.permanent.callout"/>
+        <remove name="right.permanent.callout"/>
+        <remove name="paypal.partner.right.logo"/>
+        <remove name="catalog.compare.sidebar"/>
+        <remove name="sale.reorder.sidebar"/>
+        <remove name="checkout.cart.shipping"/>
+        <reference name="top.links">
+            <action method="removeLinkBlock"><blockName>wishlist_link</blockName></action>
+        </reference>
+    </default>
+    
+    <customer_account>
+        <reference name="customer_account_navigation">
+            <action method="removeLink"><name>billing_agreements</name></action>
+            <action method="removeLink"><name>recurring_profiles</name></action>
+            <action method="removeLink"><name>tags</name></action>
+            <action method="removeLink"><name>reviews</name></action>
+            <action method="removeLink"><name>wishlist</name></action>
+            <action method="removeLink"><name>OAuth Customer Tokens</name></action>
+            <action method="removeLink"><name>downloadable_products</name></action>
+            <action method="removeLink"><name>newsletter</name></action>
+        </reference>
+    </customer_account>
+    
+</layout>
