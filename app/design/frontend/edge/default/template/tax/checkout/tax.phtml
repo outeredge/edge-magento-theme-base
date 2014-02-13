@@ -44,7 +44,7 @@
     </div>
     <?php endforeach; ?>
 <?php endif;?>
-<div class="row" <?php if ($this->helper('tax')->displayFullSummary() && $_value!=0): ?> onclick="expandDetails(this, '.summary-details-<?php echo $taxIter;?>')"<?php endif; ?>>
+<div class="row table-foot" <?php if ($this->helper('tax')->displayFullSummary() && $_value!=0): ?> onclick="expandDetails(this, '.summary-details-<?php echo $taxIter;?>')"<?php endif; ?>>
     <div class="large-9 text-right" style="<?php echo $_style ?>">
         <?php if ($this->helper('tax')->displayFullSummary()): ?>
             <div class="summary-collapse"><?php echo $this->getTotal()->getTitle() ?></div>

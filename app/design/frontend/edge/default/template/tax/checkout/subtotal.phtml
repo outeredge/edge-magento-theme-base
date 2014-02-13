@@ -1,5 +1,5 @@
 <?php if ($this->displayBoth()):?>
-<div class="row">
+<div class="row table-foot">
     <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
         <?php echo $this->helper('tax')->__('Subtotal (Excl. Tax)') ?>
     </div>
@@ -7,7 +7,7 @@
         <?php echo $this->helper('checkout')->formatPrice($this->getTotal()->getValueExclTax()) ?>
     </div>
 </div>
-<div class="row">
+<div class="row table-foot">
     <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
         <?php echo $this->helper('tax')->__('Subtotal (Incl. Tax)') ?>
     </div>
@@ -16,7 +16,7 @@
     </div>
 </div>
 <?php else: ?>
-<div class="row">
+<div class="row table-foot">
     <div class="large-9 text-right" style="<?php echo $this->getStyle() ?>">
         <?php echo $this->getTotal()->getTitle() ?>
     </div>

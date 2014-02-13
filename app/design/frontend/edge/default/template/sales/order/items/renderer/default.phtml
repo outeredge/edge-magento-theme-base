@@ -1,5 +1,5 @@
 <?php $_item = $this->getItem() ?>
-<div class="row" id="order-item-row-<?php echo $_item->getId() ?>">
+<div class="row table-body" id="order-item-row-<?php echo $_item->getId() ?>">
     <div class="large-3">
         <h3 class="product-name"><?php echo $this->escapeHtml($_item->getName()) ?></h3>
         <?php if($_options = $this->getItemOptions()): ?>
@@ -87,7 +87,6 @@
                     <?php endif; ?>
                 <?php endif; ?>
             </span>
-            <br />
         <?php endif; ?>
         <?php if ($this->helper('tax')->displaySalesBothPrices() || $this->helper('tax')->displaySalesPriceInclTax()): ?>
             <span class="price-incl-tax">
@@ -206,7 +205,7 @@
                 <?php endif; ?>
             </span>
         <?php endif; ?>
-        <?php if ($this->helper('tax')->displaySalesBothPrices() || $this->helper('tax')->displaySalesPriceInclTax()): ?><br />
+        <?php if ($this->helper('tax')->displaySalesBothPrices() || $this->helper('tax')->displaySalesPriceInclTax()): ?>
             <span class="price-incl-tax">
                 <?php if ($this->helper('tax')->displaySalesBothPrices()): ?>
                    <?php if (!Mage::helper('weee')->typeOfDisplay($this->getItem(), array(1, 4), 'sales') && (float)$this->getItem()->getWeeeTaxAppliedAmount()): ?>
