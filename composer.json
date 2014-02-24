@@ -20,7 +20,7 @@
     ],
     "extra": {
         "map": [
-            ["app", "app"]
+            ["app/design/frontend/edge/default", "app/design/frontend/edge/default"]
         ]
     }
 }
