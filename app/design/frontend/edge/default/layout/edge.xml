@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-    
+
     <default>
+        <reference name="head">
+            <block type="core/text" name="meta_viewport">
+                <action method="setText">
+                    <text><![CDATA[
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                    ]]></text>
+                </action>
+            </block>
+        </reference>
         <remove name="right.poll"/>
         <remove name="left.permanent.callout"/>
         <remove name="right.permanent.callout"/>
@@ -13,7 +22,7 @@
             <action method="removeLinkBlock"><blockName>wishlist_link</blockName></action>
         </reference>
     </default>
-    
+
     <customer_account>
         <reference name="customer_account_navigation">
             <action method="removeLink"><name>billing_agreements</name></action>
@@ -26,5 +35,5 @@
             <action method="removeLink"><name>newsletter</name></action>
         </reference>
     </customer_account>
-    
+
 </layout>
