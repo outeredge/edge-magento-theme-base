@@ -14,7 +14,9 @@
     },
     "extra": {
         "map": [
-            ["app/design/frontend/edge/default/layout/edge.xml", "app/design/frontend/edge/default/layout/edge.xml"],
+            ["app/etc/modules/Edge_Theme.xml", "app/etc/modules/Edge_Theme.xml"],
+            ["app/code/local/Edge/Theme/etc/config.xml", "app/code/local/Edge/Theme/etc/config.xml"],
+            ["app/design/frontend/edge/default/layout/edge_theme.xml", "app/design/frontend/edge/default/layout/edge_theme.xml"],
             ["app/design/frontend/edge/default/template/checkout", "app/design/frontend/edge/default/template/checkout"],
             ["app/design/frontend/edge/default/template/customer", "app/design/frontend/edge/default/template/customer"],
             ["app/design/frontend/edge/default/template/page", "app/design/frontend/edge/default/template/page"],
