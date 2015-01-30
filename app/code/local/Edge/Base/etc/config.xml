@@ -9,7 +9,7 @@
         <layout>
             <updates>
                 <edge>
-                    <file>edge_theme.xml</file>
+                    <file>edge/theme.xml</file>
                 </edge>
             </updates>
         </layout>
