@@ -1,4 +1,1 @@
-edge-magento-theme-base
-=======================
-
-Edge Magento Theme Base
+Magento2 Base Theme by outer/edge

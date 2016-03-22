@@ -1,6 +1,0 @@
-<h3><?php echo $this->__('My Account'); ?></h3>
-<ul>
-<?php foreach ($this->getLinks() as $_link): ?>
-    <li><a href="<?php echo $_link->getUrl() ?>"<?php if ($this->isActive($_link)): ?> class="active"<?php endif; ?>><?php echo $_link->getLabel() ?></a></li>
-<?php endforeach; ?>
-</ul>

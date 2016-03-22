@@ -1,6 +1,0 @@
-<?php if ($this->canApplyMsrp()): ?>
-    <div class="cart-msrp-totals"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></div>
-<?php else: ?>
-    <?php echo $this->renderTotals(); ?>
-    <?php echo $this->renderTotals('footer'); ?>
-<?php endif; ?>
